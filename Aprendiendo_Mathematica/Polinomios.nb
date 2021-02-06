@@ -1,50 +1,205 @@
+In[82]:=
 In[4]:=
+
 x^3 + (3x^2 + 7)(4x-1)+(2x-3)^4 //Expand
 
 
+
+
+
 Out[4]= 74-188 x+213 x^2-83 x^3+16 x^4
+
 In[7]:= 
+
 (x+y)^3 //Expand
+
 Out[7]= x^3+3 x^2 y+3 x y^2+y^3
+
 In[10]:= 
+
 (*Cociente y resto de polinomios*)
 
+
+
 c=PolynomialQuotient[x^3+5x^2-3x+2, 4x-3,x]
+
 Out[10]= 21/64+(23 x)/16+x^2/4
+
 In[11]:= 
+
 r = PolynomialRemainder[x^3+5x^2-3x+2, 4x-3,x]
+
 Out[11]= 191/64
+
 In[12]:= (*Esta función genera los dos*)
+
 PolynomialQuotientRemainder[x^3+5x^2-3x+2, 4x-3,x]
+
 Out[12]= {21/64+(23 x)/16+x^2/4,191/64}
 
+
+
 (4x-3)*c + r //Expand (*Comprobación de la división*)
+
 Out[13]= 2-3 x+5 x^2+x^3
+
 In[15]:= 
+
 (* Factorización de polinomios *)
+
 p = x^4 - x^3 - 7x^2+13x-6
+
 Out[15]= -6+13 x-7 x^2-x^3+x^4
+
 In[16]:= Factor[p]
+
 Out[16]= (-2+x) (-1+x)^2 (3+x)
+
+
 
 (*Mathematica no factoriza a veces como queremos polinomios con raices irracionales*)
 
+
+
 q = x^3+x^2-2x-2
+
 Factor[q]
+
 In[29]:= -2-2 x+x^2+x^3
+
 In[31]:= -2-2 x+x^2+x^3
+
 Out[31]= -2-2 x+x^2+x^3
+
 In[32]:= 
+
 q2 = x^3+x^2-2x-2.
+
 Factor[q2]
+
 Out[32]= -2.-2 x+x^2+x^3
+
 Out[33]= 1. (-1.41421+1. x) (1. +1. x) (1.41421 +1. x)
+
 In[30]:= -2.`-2 x+x^2+x^3
+
 Out[30]= -2.-2 x+x^2+x^3
 
+
+
 (*Para factorizar sobre los complejos con parte imaginaria y real entera hay que activar la opción GaussianIntegers *)
+
 Factor[x^3+3x^2+x+3] (* desactivado*)
+
 Out[34]= (3+x) (1+x^2)
+
 In[36]:= Factor[x^3+3x^2+x+3, GaussianIntegers->True]
+
 (* activado*)
+
 Out[36]= (-I+x) (I+x) (3+x)
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[4] is Protected. >>
+Out[82]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %4 is Protected. >>
+Out[88]= 74-188 x+213 x^2-83 x^3+16 x^4
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[7] is Protected. >>
+Out[90]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %7 is Protected. >>
+Out[92]= x^3+3 x^2 y+3 x y^2+y^3
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[10] is Protected. >>
+Out[94]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %10 is Protected. >>
+Out[96]= 21/64+(23 x)/16+x^2/4
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[11] is Protected. >>
+Out[98]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %11 is Protected. >>
+Out[100]= 191/64
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[12] is Protected. >>
+Out[102]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %12 is Protected. >>
+Out[104]= {21/64+(23 x)/16+x^2/4,191/64}
+Out[108]= -3 c+r+4 c x
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %13 is Protected. >>
+Out[110]= 2-3 x+5 x^2+x^3
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[15] is Protected. >>
+Out[112]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %15 is Protected. >>
+Out[114]= -6+13 x-7 x^2-x^3+x^4
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[16] is Protected. >>
+Out[116]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %16 is Protected. >>
+Out[118]= (-2+x) (-1+x)^2 (3+x)
+Out[126]= -2-2 x+x^2+x^3
+Out[128]= (1+x) (-2+x^2)
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[29] is Protected. >>
+Out[130]= $Failed
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[31] is Protected. >>
+Out[132]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %31 is Protected. >>
+Out[134]= -2-2 x+x^2+x^3
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[32] is Protected. >>
+Out[136]= $Failed
+Out[138]= q2
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %32 is Protected. >>
+Out[140]= -2.-2 x+x^2+x^3
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %33 is Protected. >>
+Out[142]= 1. (-1.41421+1. x) (1. +1. x) (1.41421 +1. x)
+Durante la evaluaci\363n de In[82]:= Precision::precsm: Requested precision -2. is smaller than $MinPrecision. Using $MinPrecision instead. >>
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[30] is Protected. >>
+Out[144]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %30 is Protected. >>
+Out[146]= -2.-2 x+x^2+x^3
+Out[152]= (3+x) (1+x^2)
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %34 is Protected. >>
+Out[154]= (3+x) (1+x^2)
+Durante la evaluaci\363n de In[82]:= SetDelayed::write: Tag In in In[36] is Protected. >>
+Out[156]= $Failed
+Durante la evaluaci\363n de In[82]:= Set::write: Tag Out in %36 is Protected. >>
+Out[160]= (-I+x) (I+x) (3+x)
+In[163]:= 
+(*Podemos buscar el MCD y el MCM de polinomios*)
+
+
+PolynomialGCD[x+1,x^2]
+Out[163]= 1
+In[162]:= 
+PolynomialLCM[x+1,x^2]
+Out[162]= x^2 (1+x)
+In[169]:= 
+(*Sustitución de variables*)
+
+p = -6 + 13x-7x^2-x^3+x^4;
+p/.x-> 5 (* Sustitución de x por 5 *)
+Out[170]= 384
+
+Roots[p==0,x] (* raices *)
+Out[171]= x==-3||x==1||x==1||x==2
+
+NRoots[x^3-5x^2+3x+2 == 0, x, PrecisionGoal->10] (* Soluciones del polinomio, con 10 decimales *)
+Out[173]= x==-0.3913823806||x==1.227134442||x==4.164247938
+In[176]:= 
+(*Interpolación y rectas: Qué función tiene una curva tal que pasa por esos dos puntos*)
+
+InterpolatingPolynomial[{{3,4},{6,8}},x]
+Out[176]= 4+4/3 (-3+x)
+
+x+1,x^2]
+In[177]:= 
+InterpolatingPolynomial[{{3,6},{2,7},{4,7}},x]
+Out[177]= 6+(-3+x)^2
+In[179]:= 
+6+(-3+x)^2/.x-> 3
+6+(-3+x)^2/.x-> 2
+6+(-3+x)^2/.x-> 4
+Out[179]= 6
+Out[180]= 7
+Out[181]= 7
+
+InterpolatingPolynomial[{{2,3},{3,4},{4,5}},x]
+1+x (* Polinomio de grado 1  puntos alineados *)
+(*Calcular el polinomio mínimo de un número algebaico*)
+
+In[184]:= Element[3,Algebraics]
+MinimalPolynomial[3,x]
+Out[184]= True
+Out[185]= -3+x
