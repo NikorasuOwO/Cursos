@@ -1,0 +1,46 @@
+In[5]:=
+Quotient[7,4] (*Devuelve el cociente resultante de la division euclidea*)
+
+
+Out[5]= 1
+In[4]:= Mod[7,4] (*Devuelve el resto*)
+Out[4]= 3
+QuotientRemainder[7,4] (*Devuelve el cociente y el resto*)
+
+In[28]:= PrimeQ[7] (*Devuelve True si el número es primo, sino False*)
+PrimeQ[6]
+Out[28]= True
+In[33]:= Prime[5] (*Nos da en n-ésimo primo*)
+Out[33]= 11
+In[34]:= NextPrime[10,1] (*Nos da el n-ésimo primo después del número k indicado: NextPrime[k,n] *)
+
+Out[34]= 11
+In[35]:= 
+(* Para buscar el último primo antes de un númro usamos: *)
+PrimePi[5000]
+Out[35]= 669
+In[36]:= 
+(*Descomposición en factores primos*)
+FactorInteger[189]
+Out[36]= {{3,3},{7,1}}
+In[37]:= FactorInteger[-260]
+
+Out[37]= {{-1,1},{2,2},{5,1},{13,1}}
+In[38]:= 
+FactorInteger[260/34]
+Out[38]= {{2,1},{5,1},{13,1},{17,-1}}
+
+Factorial[45] (*Factorial de un número*)
+Out[41]= 119622220865480194561963161495657715064383733760000000000
+In[45]:= 
+Divisors[60]
+Divisors[189]
+Divisors[67]
+Out[45]= {1,2,3,4,5,6,10,12,15,20,30,60}
+Out[46]= {1,3,7,9,21,27,63,189}
+Out[47]= {1,67}
+In[48]:= 
+(* Máximo común divisor: *) GCD[612,5292]
+Out[48]= 36
+In[51]:= (* Mínimo común múltiplo: *) LCM[12,123]
+Out[51]= 492
