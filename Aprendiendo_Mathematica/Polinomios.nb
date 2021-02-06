@@ -203,3 +203,4 @@ In[184]:= Element[3,Algebraics]
 MinimalPolynomial[3,x]
 Out[184]= True
 Out[185]= -3+x
+5 y 65
