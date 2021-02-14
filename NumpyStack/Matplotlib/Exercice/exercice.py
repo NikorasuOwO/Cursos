@@ -2,11 +2,10 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-import math
 
 #  Generating data
-n = 10000  # Number of points
-P = np.random.uniform(-1, 1, (n, n))  # 50 points with 2 coordinates
+n = 1000  # Number of points
+P = np.random.uniform(-1, 1, (n, 2))  # 50 points with 2 coordinates
 xcoords = P[:, 0]
 ycoords = P[:, 1]
 
@@ -22,3 +21,4 @@ plt.show()
 # print("L: " + str(L))
 # print("xc: " + str(np.ceil(xcoords[:])))
 # print("xy: " + str(np.ceil(ycoords[:])))
+print(str(np.shape(P)))
