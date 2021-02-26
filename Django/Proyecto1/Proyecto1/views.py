@@ -1,19 +1,19 @@
 from django.http import HttpResponse # Importamos el módulo django.http para hacer peticiones
 
 import datetime
-
+from django.template import Template, Context
 
 def saludo(request): # primera vista
 
-    documento = """
-    <html>
-    <body>
-    <h1>
-    Hola esta es mi primera página con Django
-    </h1>
-    </body>
-    </html>
-    """
+    doc_externo = open("C:/Users/Nicolas/Desktop/Cursos/Django/Proyecto1/Proyecto1/plantillas/mi_plantilla.html")
+
+    plt = Template(doc_externo.read())
+
+    doc_externo.close()
+
+    ctx = Context()
+
+    documento = plt.render(ctx)
 
     return HttpResponse(documento) # Respuesta a la peticion
 
