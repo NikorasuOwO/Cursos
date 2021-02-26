@@ -17,11 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 #Debemos importar la funcion
-from Proyecto1.views import saludo
-from Proyecto1.views import despedida
+from Proyecto1.views import saludo, despedida, hora_actual, calcula_edad
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
     path('adios/', despedida),
+    path('fecha/', hora_actual),
+    path('edades/<int:edad>/<int:year>/', calcula_edad),
 ]
