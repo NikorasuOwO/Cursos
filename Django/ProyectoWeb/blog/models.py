@@ -19,8 +19,8 @@ class Categoria(models.Model):
 
 class Post(models.Model):
 
-    titulo = models.CharField(max_length=50)
-    contenido = models.CharField(max_length=50)
+    titulo = models.CharField(max_length=200)
+    contenido = models.CharField(max_length=1000000)
     imagen = models.ImageField(upload_to="blog", null=True, blank=True) # Puede ser opcional
 
     autor = models.ForeignKey(User, on_delete=models.CASCADE) # Cada post va asociado con un usuario

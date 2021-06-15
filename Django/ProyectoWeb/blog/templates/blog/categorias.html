@@ -1,4 +1,4 @@
-{% extends "ProyectoWebApp/base.html" %}
+{% extends "blog/blog.html" %}
 
 {% load static %}
 
@@ -14,21 +14,34 @@
        <h2 class="section-heading mb-4" >
          <span class="section-heading-lower">{{post.titulo}}</span>
          <span class="section-heading-lower" style="text-align:left; font-size:20px">{{post.autor}}</span>
-         <span class="section-heading-upper">{{post.contenido}}</span>
        </h2>
      </div>
    </div>
  </div>
+
 </section>
+
+<div style="width: 70%; background-color: darkgreen; margin: 100; text-align: justify; ; color: white">
+<h2 style="text-align: center">{{post.titulo}}</h2>
+{{post.contenido}}
+
+</div>
 
 {% endfor %}
 
+<div>
+  <br>
+</div>
 <section>
   <div style="width: 70%; background-color: darkgreen; margin: auto; text-align: center ; color: white">
 
-    Categorías:
+Categoría actual: <strong>{{categoria.nombre}}</strong>
+    <br></br>
 
-        {{categoria.nombre}}
+    Todas las categorías:
+      {% for categoria in categorias %}
+      <a href="{% url 'categoria' categoria.id %}"/>{{categoria.nombre}}</a>
+      {% endfor %}
 
   </div>
 

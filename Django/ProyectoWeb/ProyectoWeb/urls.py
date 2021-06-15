@@ -22,5 +22,6 @@ urlpatterns = [ # URLs para todo el proyecto
     path('', include('ProyectoWebApp.urls')), # Enlazamos con las URLs de ProyectoWebApp
     path('servicios/', include('servicios.urls')), # Enlazamos con las URLs de la App
     path('blog/', include('blog.urls')),
+    path('contacto/', include('contacto.urls')),
 
 ]

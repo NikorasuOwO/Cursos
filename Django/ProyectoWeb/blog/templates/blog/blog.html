@@ -14,12 +14,17 @@
        <h2 class="section-heading mb-4" >
          <span class="section-heading-lower">{{post.titulo}}</span>
          <span class="section-heading-lower" style="text-align:left; font-size:20px">{{post.autor}}</span>
-         <span class="section-heading-upper">{{post.contenido}}</span>
        </h2>
      </div>
    </div>
  </div>
 </section>
+
+<div style="width: 70%; background-color: darkgreen; margin: 100; text-align: justify; ; color: white">
+<h2 style="text-align: center">{{post.titulo}}</h2>
+{{post.contenido}}
+
+</div>
 
 {% endfor %}
 
