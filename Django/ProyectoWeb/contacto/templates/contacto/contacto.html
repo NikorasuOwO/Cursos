@@ -7,12 +7,22 @@
   <h1 style="background-color: rgba(24,64,8);
     margin: auto; text-align: center; color: white;">😊 CONTACTA CON NOSOTROS🤗</h1>
 
+    {% if "valido" in request.GET %}
+      <p style="color: snow"> Información enviada correctamente</p>
+    {% endif %}
+
   <div style="background-color: rgba(24,64,8);
     width: 50%;
     margin: auto;
     color: white;">
 
-  <table style="color: white;">{{miFormulario.as_table}}</table>
+
+  <form action="" method="POST" style="text-align: center;">
+  {% csrf_token %}
+  <table style="color: white; mergin: 20px auto;">{{miFormulario.as_table}}</table>
+  <input type="submit" value="Enviar" style="width: 150px">
+  </form>
+
   </div>
 
 
