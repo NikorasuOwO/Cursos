@@ -1,0 +1,25 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+
+        {%for producto in productos %}
+                <div class="card" style="width: 10%">
+    
+                    <img src="{{producto.imagen.url}}">
+                    <div class="card-body" style="text-align: center;">
+
+                        <h7 class="card-title"> {{producto.nombre}} </h7>
+                        <p class="card-text">{{producto.precio}} &nbsp;€</p>
+                    </div>
+            </div>
+
+        {% endfor %}
+
+</div>
+</div>
+{% endblock %}
