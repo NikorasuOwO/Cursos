@@ -7,11 +7,13 @@ from .forms import *
 
 def index(request):
 
-    tasks = Task.objects.order_by('-created')
+    tasks_todo = Task.objects.filter(complete=False).order_by('-created')
+    tasks_done = Task.objects.filter(complete=True).order_by('-created')
 
     form = TaskForm()
 
     if request.method == 'POST':
+
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
@@ -19,7 +21,7 @@ def index(request):
 
 
 
-    context = {'tasks':tasks, 'form':form}
+    context = {'tasks_todo':tasks_todo, 'tasks_done':tasks_done, 'form':form}
 
     return render(request, 'tasks/list.html', context)
 
@@ -45,10 +47,17 @@ def updateTask(request, pk):
 def deleteTask(request, pk):
     item = Task.objects.get(pk=pk)
 
-
     if request.method == 'POST':
         item.delete()
-        return redirect('/')
+    
+    return redirect('/')
 
-    context = {'item':item}
-    return render(request, 'tasks/delete.html', context)
+def toggleTask(request, pk):
+
+    if request.method == 'POST':
+        item = Task.objects.get(pk=pk)
+        item.complete = not item.complete
+
+        item.save()
+
+    return redirect('/')
