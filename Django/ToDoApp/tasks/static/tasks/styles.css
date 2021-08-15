@@ -83,9 +83,10 @@ body {
 .card__text {
   grid-row: 1/4;
   grid-column: 1/4;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
-  font-size: auto;
+  font-size: calc(1.85vw + 1vh + 0vmin);
+  text-align: left;
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -146,9 +147,9 @@ body {
 .card_done__text {
   grid-row: 1/4;
   grid-column: 1/5;
-  font-weight: 400;
+  font-weight: 500;
   color: #ffffff;
-  font-size: auto;
+  font-size: calc(1vw + 0.6vh);
 
   overflow: hidden;
   text-overflow: ellipsis;
@@ -190,7 +191,7 @@ body {
 }
 
 .card-new {
-    background: radial-gradient(#ffff, #85f194);
+    background: radial-gradient(rgb(241, 173, 173), #fd2e8f);
 }
 
 /* RESPONSIVE */
